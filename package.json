@@ -1,0 +1,17 @@
+{
+  "name": "course_pw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "wtd": "playwright test ./pom/tests --project='chromium' --grep='Saucedemo'",
+    "codegen": "playwright codegen https://www.saucedemo.com/ --browser='firefox'",
+    "wize": "playwright test ./pom/tests --project='chromium' --grep='Wize'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.22.0"
+  }
+}
