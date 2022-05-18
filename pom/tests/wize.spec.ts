@@ -18,7 +18,7 @@ test.describe("Validate the notification signup process. Need Thanks shows", () 
         await page.goto("https://academy.workshop-qa.website.wize.mx/women-in-tech/")
         await page.locator('button:has-text("Accept All Cookies")').click();
         await page.screenshot({ path: 'screenshot.png', fullPage: true });
-        await expect(page).toHaveScreenshot();
+        await expect(page).toMatchScreenshot('screenshot.png');
 
     });
     test("Wize 3", async ({ page }) => {
@@ -51,7 +51,8 @@ test.describe("Validate the notification signup process. Need Thanks shows", () 
     test('Wize 5', async ({ page }) => {
         await page.goto('https://academy.workshop-qa.website.wize.mx/');
         await page.locator('button:has-text("Accept All Cookies")').click();
-        /* validate tje screenshot */
-        await expect(page).toHaveScreenshot([animation:disabled]);
+        await page.screenshot({ path: 'sc_wize5.png', fullPage: true });
+        await expect(page).toHaveScreenshot('sc_wize5.png','animation:disabled');
+        
     })
 });
